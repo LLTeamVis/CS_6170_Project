@@ -4,4 +4,4 @@
  - Email: u0866264@utah.edu & u1210675@utah.edu
 
 ## Project Structure
- -[Data]
+ -[Data](https://github.com/LLTeamVis/CS_6170_Project/tree/master/Data) Data
