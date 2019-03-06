@@ -1,0 +1,6 @@
+n Contig1248.1
+n Contig20066.0.1
+n Contig8809.0.1
+e Contig1248.1 Contig20066.0.1 1.0
+e Contig1248.1 Contig8809.0.1 2.0
+e Contig20066.0.1 Contig8809.0.1 1.0

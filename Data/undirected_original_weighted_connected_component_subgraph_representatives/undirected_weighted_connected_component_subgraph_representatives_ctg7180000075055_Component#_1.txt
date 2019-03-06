@@ -1,0 +1,5 @@
+n Contig15478.0
+n Contig20626.0
+n Contig12809.0
+e Contig15478.0 Contig20626.0 6.0
+e Contig12809.0 Contig20626.0 6.0

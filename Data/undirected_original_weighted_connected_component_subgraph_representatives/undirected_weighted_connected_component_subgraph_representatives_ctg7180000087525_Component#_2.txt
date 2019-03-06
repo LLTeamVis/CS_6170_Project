@@ -1,0 +1,7 @@
+n Contig15197.0
+n Contig13917.0
+n Contig196.0
+n Contig458.1
+e Contig15197.0 Contig458.1 11.0
+e Contig13917.0 Contig458.1 21.0
+e Contig196.0 Contig458.1 21.0

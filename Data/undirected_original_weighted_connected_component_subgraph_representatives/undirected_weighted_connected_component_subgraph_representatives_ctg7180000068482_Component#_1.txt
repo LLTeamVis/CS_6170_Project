@@ -1,0 +1,5 @@
+n Contig5057.0
+n Contig6570.0
+n Contig8220.0
+e Contig5057.0 Contig6570.0 10.0
+e Contig6570.0 Contig8220.0 1.0

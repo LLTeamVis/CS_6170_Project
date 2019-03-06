@@ -1,0 +1,19 @@
+n Contig17941.0
+n Contig17719.0
+n Contig223.1
+n Contig12149.0
+n Contig19632.0
+n Contig1249.1
+n Contig18086.0
+n Contig14780.0
+n Contig13041.0
+n Contig4878.0
+e Contig17941.0 Contig12149.0 16.0
+e Contig17719.0 Contig12149.0 1.0
+e Contig223.1 Contig12149.0 1.0
+e Contig12149.0 Contig14780.0 3.0
+e Contig12149.0 Contig19632.0 3.0
+e Contig12149.0 Contig1249.1 15.0
+e Contig12149.0 Contig18086.0 8.0
+e Contig12149.0 Contig13041.0 16.0
+e Contig12149.0 Contig4878.0 3.0

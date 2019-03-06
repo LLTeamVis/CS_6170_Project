@@ -1,0 +1,8 @@
+n Contig85.1
+n Contig4662.0
+n Contig3922.0
+n Contig251.1
+e Contig85.1 Contig3922.0 8.0
+e Contig4662.0 Contig3922.0 1.0
+e Contig4662.0 Contig251.1 6.0
+e Contig3922.0 Contig251.1 6.0

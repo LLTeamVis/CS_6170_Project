@@ -1,0 +1,9 @@
+n Contig3791.0
+n Contig9517.0
+n Contig11385.0
+n Contig19385.0
+e Contig3791.0 Contig9517.0 5.0
+e Contig3791.0 Contig19385.0 48.0
+e Contig3791.0 Contig11385.0 5.0
+e Contig9517.0 Contig19385.0 5.0
+e Contig11385.0 Contig19385.0 5.0

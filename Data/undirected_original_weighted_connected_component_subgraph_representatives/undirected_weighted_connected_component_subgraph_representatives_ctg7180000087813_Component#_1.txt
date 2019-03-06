@@ -1,0 +1,11 @@
+n Contig7616.0
+n Contig19581.0
+n Contig13533.0
+n Contig15744.0
+n Contig866.0
+e Contig7616.0 Contig19581.0 3.0
+e Contig7616.0 Contig13533.0 3.0
+e Contig19581.0 Contig15744.0 1.0
+e Contig19581.0 Contig866.0 4.0
+e Contig13533.0 Contig15744.0 1.0
+e Contig13533.0 Contig866.0 4.0

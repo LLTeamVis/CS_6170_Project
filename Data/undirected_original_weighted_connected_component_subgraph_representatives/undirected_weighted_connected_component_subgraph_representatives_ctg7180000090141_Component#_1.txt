@@ -1,0 +1,3 @@
+n Contig8098.0
+n Contig129.0
+e Contig8098.0 Contig129.0 22.0

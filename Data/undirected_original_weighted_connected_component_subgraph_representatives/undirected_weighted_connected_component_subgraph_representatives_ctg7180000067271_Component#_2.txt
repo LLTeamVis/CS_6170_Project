@@ -1,0 +1,12 @@
+n Contig448.1
+n Contig7944.0
+n Contig15196.0
+n Contig13695.0
+n Contig10565.0
+e Contig15196.0 Contig448.1 10.0
+e Contig15196.0 Contig7944.0 8.0
+e Contig15196.0 Contig13695.0 21.0
+e Contig15196.0 Contig10565.0 13.0
+e Contig7944.0 Contig13695.0 8.0
+e Contig448.1 Contig13695.0 10.0
+e Contig13695.0 Contig10565.0 13.0

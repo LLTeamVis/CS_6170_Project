@@ -1,0 +1,3 @@
+n Contig1125.0
+n Contig3613.0
+e Contig1125.0 Contig3613.0 15.0

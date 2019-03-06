@@ -1,0 +1,3 @@
+n Contig10869.0
+n Contig13333.0
+e Contig10869.0 Contig13333.0 4.0

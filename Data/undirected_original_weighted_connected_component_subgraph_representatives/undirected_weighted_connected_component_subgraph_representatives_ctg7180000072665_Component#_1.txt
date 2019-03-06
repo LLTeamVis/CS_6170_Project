@@ -1,0 +1,7 @@
+n Contig16577.0
+n Contig21629.0
+n Contig12165.0
+n Contig4202.0
+e Contig16577.0 Contig21629.0 3.0
+e Contig21629.0 Contig12165.0 9.0
+e Contig21629.0 Contig4202.0 9.0

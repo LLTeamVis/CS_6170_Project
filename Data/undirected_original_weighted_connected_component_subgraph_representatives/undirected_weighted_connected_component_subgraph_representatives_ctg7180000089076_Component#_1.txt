@@ -1,0 +1,13 @@
+n Contig1357.0
+n Contig6169.0
+n Contig6707.0
+n Contig6059.0
+n Contig3294.0
+n Contig14970.0
+e Contig1357.0 Contig6059.0 19.0
+e Contig1357.0 Contig6169.0 19.0
+e Contig6169.0 Contig6707.0 2.0
+e Contig6169.0 Contig6059.0 4.0
+e Contig6707.0 Contig6059.0 5.0
+e Contig6059.0 Contig3294.0 11.0
+e Contig6059.0 Contig14970.0 7.0

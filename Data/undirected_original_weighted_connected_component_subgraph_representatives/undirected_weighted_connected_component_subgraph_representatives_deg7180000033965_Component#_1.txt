@@ -1,0 +1,11 @@
+n Contig16052.0
+n Contig5352.0
+n Contig12153.0
+n Contig449.1
+n Contig10959.0
+e Contig16052.0 Contig5352.0 4.0
+e Contig16052.0 Contig12153.0 50.0
+e Contig5352.0 Contig12153.0 50.0
+e Contig12153.0 Contig10959.0 5.0
+e Contig12153.0 Contig449.1 6.0
+e Contig10959.0 Contig449.1 5.0

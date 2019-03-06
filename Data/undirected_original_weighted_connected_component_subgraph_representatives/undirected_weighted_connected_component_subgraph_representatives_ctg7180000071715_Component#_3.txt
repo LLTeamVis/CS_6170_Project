@@ -1,0 +1,10 @@
+n Contig968.1
+n Contig5317.0
+n Contig17868.0
+n Contig14754.0.0
+n Contig15846.0
+e Contig968.1 Contig17868.0 4.0
+e Contig5317.0 Contig15846.0 3.0
+e Contig5317.0 Contig17868.0 3.0
+e Contig17868.0 Contig14754.0.0 2.0
+e Contig17868.0 Contig15846.0 6.0

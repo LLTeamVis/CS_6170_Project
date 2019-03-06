@@ -1,0 +1,5 @@
+n Contig21546.0
+n Contig21684.0
+n Contig11434.0
+e Contig21546.0 Contig21684.0 11.0
+e Contig21684.0 Contig11434.0 3.0

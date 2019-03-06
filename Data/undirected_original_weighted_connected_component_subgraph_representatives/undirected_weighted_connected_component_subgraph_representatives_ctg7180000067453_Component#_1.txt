@@ -1,0 +1,19 @@
+n Contig22031.0
+n Contig14475.0.1
+n Contig12493.0.1
+n Contig20642.0
+n Contig10053.0
+n Contig12808.0
+n Contig890.0
+e Contig22031.0 Contig14475.0.1 2.0
+e Contig22031.0 Contig12493.0.1 4.0
+e Contig22031.0 Contig20642.0 7.0
+e Contig22031.0 Contig10053.0 8.0
+e Contig22031.0 Contig12808.0 8.0
+e Contig22031.0 Contig890.0 3.0
+e Contig14475.0.1 Contig12808.0 2.0
+e Contig14475.0.1 Contig20642.0 7.0
+e Contig12493.0.1 Contig12808.0 4.0
+e Contig20642.0 Contig12808.0 7.0
+e Contig10053.0 Contig12808.0 8.0
+e Contig12808.0 Contig890.0 3.0

@@ -1,0 +1,9 @@
+n Contig19487.0.1
+n Contig20862.0.0
+n Contig6668.0
+n Contig7904.0
+e Contig19487.0.1 Contig7904.0 3.0
+e Contig19487.0.1 Contig20862.0.0 9.0
+e Contig19487.0.1 Contig6668.0 7.0
+e Contig20862.0.0 Contig6668.0 7.0
+e Contig20862.0.0 Contig7904.0 3.0

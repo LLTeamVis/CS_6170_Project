@@ -1,0 +1,9 @@
+n Contig336.1
+n Contig29.1
+n Contig815.1
+n Contig1439.1
+e Contig1439.1 Contig336.1 4.0
+e Contig1439.1 Contig815.1 4.0
+e Contig29.1 Contig336.1 7.0
+e Contig29.1 Contig815.1 7.0
+e Contig336.1 Contig815.1 29.0

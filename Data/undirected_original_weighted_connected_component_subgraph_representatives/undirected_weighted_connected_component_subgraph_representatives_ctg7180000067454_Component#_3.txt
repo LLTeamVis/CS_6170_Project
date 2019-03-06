@@ -1,0 +1,7 @@
+n Contig17767.0
+n Contig20633.0.2
+n Contig19352.0
+n Contig1929.0
+e Contig1929.0 Contig20633.0.2 6.0
+e Contig20633.0.2 Contig19352.0 29.0
+e Contig20633.0.2 Contig17767.0 3.0

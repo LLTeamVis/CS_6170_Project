@@ -1,0 +1,8 @@
+n Contig18664.0
+n Contig18179.0
+n Contig12370.0
+n Contig11086.0
+e Contig18664.0 Contig12370.0 1.0
+e Contig18179.0 Contig11086.0 1.0
+e Contig18179.0 Contig12370.0 3.0
+e Contig11086.0 Contig12370.0 1.0

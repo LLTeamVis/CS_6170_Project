@@ -1,0 +1,36 @@
+n Contig17758.0
+n Contig14381.0
+n Contig10823.0
+n Contig14492.0
+n Contig4897.0
+n Contig17167.0
+n Contig15775.0
+n Contig18120.0
+n Contig22067.0
+n Contig11177.0
+n Contig9306.0
+n Contig12114.0
+n Contig356.1
+n Contig21912.0
+n Contig19888.0
+n Contig898.0
+e Contig17758.0 Contig14492.0 13.0
+e Contig14381.0 Contig14492.0 3.0
+e Contig14381.0 Contig10823.0 3.0
+e Contig14381.0 Contig4897.0 6.0
+e Contig10823.0 Contig14492.0 5.0
+e Contig10823.0 Contig4897.0 2.0
+e Contig14492.0 Contig22067.0 6.0
+e Contig14492.0 Contig4897.0 6.0
+e Contig14492.0 Contig21912.0 18.0
+e Contig14492.0 Contig15775.0 5.0
+e Contig14492.0 Contig18120.0 8.0
+e Contig14492.0 Contig11177.0 3.0
+e Contig14492.0 Contig9306.0 5.0
+e Contig14492.0 Contig12114.0 9.0
+e Contig14492.0 Contig356.1 49.0
+e Contig14492.0 Contig17167.0 7.0
+e Contig14492.0 Contig19888.0 6.0
+e Contig14492.0 Contig898.0 5.0
+e Contig21912.0 Contig898.0 5.0
+e Contig356.1 Contig19888.0 6.0

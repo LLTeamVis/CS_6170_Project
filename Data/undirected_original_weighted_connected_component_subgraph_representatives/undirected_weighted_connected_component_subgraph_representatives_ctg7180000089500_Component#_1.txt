@@ -1,0 +1,5 @@
+n Contig19412.0
+n Contig10686.0
+n Contig6213.0
+e Contig19412.0 Contig10686.0 18.0
+e Contig10686.0 Contig6213.0 5.0

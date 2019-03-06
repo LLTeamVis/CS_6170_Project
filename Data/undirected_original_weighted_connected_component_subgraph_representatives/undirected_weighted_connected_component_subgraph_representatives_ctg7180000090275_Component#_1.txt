@@ -1,0 +1,3 @@
+n Contig7219.0
+n Contig7389.0
+e Contig7219.0 Contig7389.0 27.0

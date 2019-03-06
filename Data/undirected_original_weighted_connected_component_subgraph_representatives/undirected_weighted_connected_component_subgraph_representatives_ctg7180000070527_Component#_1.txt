@@ -1,0 +1,5 @@
+n Contig69.1
+n Contig3874.0
+n Contig664.0
+e Contig69.1 Contig3874.0 9.0
+e Contig3874.0 Contig664.0 4.0

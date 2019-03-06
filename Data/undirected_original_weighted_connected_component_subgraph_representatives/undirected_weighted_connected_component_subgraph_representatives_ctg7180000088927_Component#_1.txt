@@ -1,0 +1,5 @@
+n Contig16826.0
+n Contig6387.0
+n Contig14409.0
+e Contig16826.0 Contig6387.0 1.0
+e Contig16826.0 Contig14409.0 4.0

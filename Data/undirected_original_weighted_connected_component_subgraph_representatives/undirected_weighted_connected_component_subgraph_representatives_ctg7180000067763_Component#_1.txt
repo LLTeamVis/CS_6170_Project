@@ -1,0 +1,3 @@
+n Contig510.1
+n Contig21547.0
+e Contig510.1 Contig21547.0 11.0

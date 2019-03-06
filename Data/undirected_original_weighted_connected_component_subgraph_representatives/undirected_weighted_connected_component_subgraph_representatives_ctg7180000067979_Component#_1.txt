@@ -1,0 +1,9 @@
+n Contig4768.0
+n Contig17068.0
+n Contig21263.0.1
+n Contig21263.0.0
+n Contig17619.0
+e Contig4768.0 Contig17068.0 6.0
+e Contig4768.0 Contig21263.0.1 6.0
+e Contig4768.0 Contig21263.0.0 9.0
+e Contig4768.0 Contig17619.0 7.0

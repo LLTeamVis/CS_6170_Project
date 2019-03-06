@@ -1,0 +1,5 @@
+n Contig20696.0.1
+n Contig20332.0
+n Contig22725.0
+e Contig20696.0.1 Contig20332.0 1.0
+e Contig20332.0 Contig22725.0 1.0

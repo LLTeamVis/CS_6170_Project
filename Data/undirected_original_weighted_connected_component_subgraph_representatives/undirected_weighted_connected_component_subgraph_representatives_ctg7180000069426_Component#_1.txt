@@ -1,0 +1,8 @@
+n Contig6126.0
+n Contig11329.0
+n Contig13591.0
+n Contig21343.0
+e Contig6126.0 Contig13591.0 13.0
+e Contig11329.0 Contig13591.0 25.0
+e Contig11329.0 Contig21343.0 1.0
+e Contig13591.0 Contig21343.0 24.0

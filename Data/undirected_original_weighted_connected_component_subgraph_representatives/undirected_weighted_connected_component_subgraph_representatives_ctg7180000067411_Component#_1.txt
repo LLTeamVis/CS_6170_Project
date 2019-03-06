@@ -1,0 +1,15 @@
+n Contig20652.0
+n Contig18709.0
+n Contig6980.0
+n Contig18297.0
+n Contig1267.1
+e Contig20652.0 Contig1267.1 35.0
+e Contig20652.0 Contig18709.0 61.0
+e Contig20652.0 Contig6980.0 35.0
+e Contig20652.0 Contig18297.0 31.0
+e Contig18709.0 Contig6980.0 18.0
+e Contig18709.0 Contig18297.0 14.0
+e Contig18709.0 Contig1267.1 16.0
+e Contig6980.0 Contig18297.0 13.0
+e Contig6980.0 Contig1267.1 16.0
+e Contig18297.0 Contig1267.1 12.0

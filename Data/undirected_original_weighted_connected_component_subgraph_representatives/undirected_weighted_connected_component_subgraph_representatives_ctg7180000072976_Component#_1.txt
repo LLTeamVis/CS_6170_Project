@@ -1,0 +1,9 @@
+n Contig3021.0
+n Contig19088.0
+n Contig1590.0
+n Contig6613.0
+n Contig3314.0
+e Contig3021.0 Contig1590.0 2.0
+e Contig6613.0 Contig1590.0 5.0
+e Contig3314.0 Contig1590.0 3.0
+e Contig19088.0 Contig1590.0 3.0

@@ -1,0 +1,6 @@
+n Contig2942.0.2
+n Contig494.1
+n Contig9411.0
+e Contig494.1 Contig2942.0.2 9.0
+e Contig494.1 Contig9411.0 9.0
+e Contig2942.0.2 Contig9411.0 12.0

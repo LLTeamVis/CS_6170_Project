@@ -1,0 +1,8 @@
+n Contig18474.0
+n Contig18456.0
+n Contig22775.0
+n Contig496.0
+e Contig18474.0 Contig18456.0 11.0
+e Contig18474.0 Contig22775.0 12.0
+e Contig18456.0 Contig22775.0 8.0
+e Contig22775.0 Contig496.0 13.0

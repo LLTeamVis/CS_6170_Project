@@ -1,0 +1,9 @@
+n Contig5489.0
+n Contig5310.0
+n Contig5984.0
+n Contig1260.0
+e Contig5310.0 Contig5984.0 2.0
+e Contig5310.0 Contig1260.0 4.0
+e Contig5489.0 Contig5984.0 1.0
+e Contig5489.0 Contig1260.0 4.0
+e Contig5984.0 Contig1260.0 11.0

@@ -1,0 +1,6 @@
+n Contig14271.0
+n Contig15666.0
+n Contig20212.0
+e Contig20212.0 Contig15666.0 4.0
+e Contig20212.0 Contig14271.0 4.0
+e Contig14271.0 Contig15666.0 13.0

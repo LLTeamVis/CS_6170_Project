@@ -1,0 +1,9 @@
+n Contig20384.0
+n Contig13226.0
+n Contig19512.0
+n Contig8832.0
+e Contig20384.0 Contig13226.0 9.0
+e Contig20384.0 Contig8832.0 9.0
+e Contig13226.0 Contig8832.0 10.0
+e Contig13226.0 Contig19512.0 6.0
+e Contig19512.0 Contig8832.0 6.0

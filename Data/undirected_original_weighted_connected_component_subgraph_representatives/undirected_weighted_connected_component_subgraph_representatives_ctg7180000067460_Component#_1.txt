@@ -1,0 +1,11 @@
+n Contig221.1
+n Contig21907.0.0
+n Contig1216.1
+n Contig21072.0.1
+n Contig880.1
+n Contig18111.0
+e Contig221.1 Contig1216.1 9.0
+e Contig21907.0.0 Contig1216.1 7.0
+e Contig1216.1 Contig21072.0.1 10.0
+e Contig1216.1 Contig880.1 9.0
+e Contig1216.1 Contig18111.0 10.0

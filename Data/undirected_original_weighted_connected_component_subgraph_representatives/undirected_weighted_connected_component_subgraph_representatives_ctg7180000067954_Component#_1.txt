@@ -1,0 +1,3 @@
+n Contig9588.0
+n Contig7948.0
+e Contig9588.0 Contig7948.0 16.0

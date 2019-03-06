@@ -1,0 +1,6 @@
+n Contig9987.0
+n Contig973.0
+n Contig9692.0
+e Contig9692.0 Contig973.0 4.0
+e Contig9692.0 Contig9987.0 4.0
+e Contig973.0 Contig9987.0 1.0

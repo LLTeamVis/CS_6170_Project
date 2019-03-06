@@ -1,0 +1,9 @@
+n Contig8133.0
+n Contig17023.0
+n Contig5945.0
+n Contig9584.0
+e Contig8133.0 Contig9584.0 11.0
+e Contig8133.0 Contig17023.0 32.0
+e Contig8133.0 Contig5945.0 30.0
+e Contig17023.0 Contig5945.0 32.0
+e Contig5945.0 Contig9584.0 11.0
