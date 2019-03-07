@@ -5,3 +5,4 @@
 
 ## Project Structure
  - [Data](https://github.com/LLTeamVis/CS_6170_Project/tree/master/Data)
+ - [Website](https://llteamvis.github.io/CS_6170_Project/)
