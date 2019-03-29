@@ -14,7 +14,7 @@ class InfoBox {
         let svgPlot=d3.select('#info_box')
         .append('svg')
         .attr("width", this.width + this.margin.left + this.margin.right)
-        .attr("height", 500);
+        .attr("height", 400);
 
         d3.select('#info_box')
         .append('div')
