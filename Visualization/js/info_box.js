@@ -1,13 +1,14 @@
 class InfoBox {
-    constructor(name) {
 
-
+    constructor() {
         this.margin = { top: 20, right: 20, bottom: 60, left: 80 };
         this.width = 350 - this.margin.left - this.margin.right;
         this.height = 700 - this.margin.top - this.margin.bottom;
-        
-        this.name=name;
+        this.name=null;
+    }
 
+    set(name) {
+        this.name=name;
     }
 
     drawPlot(){
@@ -38,7 +39,7 @@ class InfoBox {
         let t=this.readFile(this.name);
         document.getElementById("info").innerHTML=t.replace(/\n/g,'<br/>');
         
-        console.log(t);
+        
     }
 
     updatePlot(name='ctg7180000073073_Component#_1'){

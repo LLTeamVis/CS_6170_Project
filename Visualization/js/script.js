@@ -1,11 +1,16 @@
+
+let gapPlot=new GapPlot();
+let infoBox = new InfoBox();
 loadData().then(data => {
     
+    gapPlot.set(data,updateInfo);
+    infoBox.set('ctg7180000073073_Component#_1');
+
     let that = this;
     function updateInfo(file){
         infoBox.updatePlot(file);
     }
-    const gapPlot = new GapPlot(data,updateInfo);
-    const infoBox = new InfoBox('ctg7180000073073_Component#_1');
+    
     // Initialize the plots; pick reasonable default values
     gapPlot.drawPlot();
     gapPlot.updatePlot();
@@ -13,6 +18,29 @@ loadData().then(data => {
     
 });
 
+async function changeData(){
+    let dataFile = document.getElementById('dataset').value;
+    let dir=document.getElementById('distance').value;
+    let fileDir='';
+    if(dir=='bottleneck')
+        fileDir='../Data/bottleneck/';
+    else if(dir=='wasserstein')
+        fileDir='../Data/wasserstein/';
+    try{
+        const data = await d3.csv(fileDir+dataFile+'.csv',function(d){
+            return{
+                NAME:d.Name,
+                X:+d.X,
+                Y:+d.Y
+            };
+        });
+        gapPlot.updateData(data);
+        
+    } catch (error) {
+        console.log(error);
+        alert('Could not load the dataset!');
+    }
+}
 async function loadFile(file) {
     let data = await d3.csv(file).then(d => {
         let mapped = d.map(g => {
@@ -30,7 +58,7 @@ async function loadFile(file) {
 }
 
 async function loadData() {
-    let data = d3.csv('../Data/bottleneckDim/MDS_coordinates_0.csv',function(d){
+    let data = d3.csv('../Data/bottleneck/MDS_coordinates_0.csv',function(d){
         return{
             NAME:d.Name,
             X:+d.X,

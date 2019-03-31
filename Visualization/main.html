@@ -21,7 +21,23 @@
     <div class="wrapper">
 
         <div id="scatter-plot" class="left">
-
+            <span>
+                <label>Dataset:</label>
+                <select id="dataset">
+                    <option selected value="MDS_coordinates_0">MDS_coordinates_0</option>
+                    <option value="MDS_coordinates_1">MDS_coordinates_1</option>
+                    <option value="TSNE_coordinates_0">TSNE_coordinates_0</option>
+                    <option value="TSNE_coordinates_1">TSNE_coordinates_1</option>
+                </select>
+            </span>
+            <span>
+                <label>Distance:</label>
+                <select id="distance">
+                    <option selected value="bottleneck">Bottleneck</option>
+                    <option value="wasserstein">Wasserstein</option>
+                </select>
+            </span>
+            <button type="button" onclick="changeData()">Update</button>
         </div>
 
         <div id="info_box" class="right">

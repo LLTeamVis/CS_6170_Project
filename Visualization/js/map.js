@@ -1,17 +1,15 @@
 class GapPlot {
 
-    constructor(data,updateInfo) {
-
-
+    constructor() {
         this.margin = { top: 20, right: 20, bottom: 60, left: 80 };
         this.width = 1310 - this.margin.left - this.margin.right;
         this.height = 700 - this.margin.top - this.margin.bottom;
-        
+        this.updateInfo=null;
+        this.data = null;
+    }
+    set(data,updateInfo) {
         this.updateInfo=updateInfo;
         this.data = data;
-
-
-
     }
 
 
@@ -70,6 +68,11 @@ class GapPlot {
         svgGroup.append('title').attr('class','title');
 
 
+    }
+
+    updateData(data){
+        this.data=data;
+        this.updatePlot();
     }
 
     updatePlot() {
