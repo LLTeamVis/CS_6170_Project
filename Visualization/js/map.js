@@ -111,7 +111,6 @@ class GapPlot {
         .selectAll('circle')
         .data(that.data)
         .exit()
-        
         .remove();
 
         d3.select('.wrapper-group')
