@@ -20,6 +20,7 @@ loadData().then(data => {
 
 async function changeData(){
     let dataFile = document.getElementById('dataset').value;
+    let dim=document.getElementById('dimension').value;
     let dir=document.getElementById('distance').value;
     let fileDir='';
     if(dir=='bottleneck')
@@ -27,7 +28,7 @@ async function changeData(){
     else if(dir=='wasserstein')
         fileDir='../Data/wasserstein/';
     try{
-        const data = await d3.csv(fileDir+dataFile+'.csv',function(d){
+        const data = await d3.csv(fileDir+dataFile+dim+'.csv',function(d){
             return{
                 NAME:d.Name,
                 X:+d.X,

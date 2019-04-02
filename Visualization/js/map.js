@@ -24,10 +24,11 @@ class GapPlot {
             .attr("class", "tooltip")
             .style("opacity", 0);
 
-        d3.select('#chart-view')
+        let svg=d3.select('#chart-view')
             .append('svg').classed('plot-svg', true)
             .attr("width", this.width + this.margin.left + this.margin.right)
-            .attr("height", this.height + this.margin.top + this.margin.bottom);
+            .attr("height", this.height + this.margin.top + this.margin.bottom)
+            ;
 
         let svgGroup = d3.select('#chart-view').select('.plot-svg').append('g').classed('wrapper-group', true);
 
@@ -109,7 +110,9 @@ class GapPlot {
         d3.select('.wrapper-group')
         .selectAll('circle')
         .data(that.data)
-        .exit().remove();
+        .exit()
+        
+        .remove();
 
         d3.select('.wrapper-group')
         .selectAll('circle')
@@ -117,16 +120,23 @@ class GapPlot {
         .enter()
         .append('circle');
 
-
         d3.select('.wrapper-group')
-        .selectAll('circle').attr('cx',d=>xScale(d.X)+that.margin.left)
+        .selectAll('circle')
+        .attr('cx',d=>xScale(d.X)+that.margin.left)
         .attr('cy',d=>yScale(d.Y))
+        .attr('fill','#d9d9d9')
+        .attr('stroke','gray')
         .attr('r',5)
         .on('mouseover',function(d){
             d3.select('.title').text(d.NAME);
         })
+        
         .on('click',function(d){
             that.updateInfo(d.NAME);
+            d3.select('.wrapper-group')
+            .selectAll('circle')
+            .attr('fill','#d9d9d9');
+            d3.select(this).attr('fill','red');
             d3.event.stopPropagation();
         });
         
