@@ -38,7 +38,7 @@ async function changeData(){
     let dist=document.getElementById('distance').value;
     let method=document.getElementById('method').value
     
-    try{
+    //try{
         const data = await d3.csv(dataset+method+dist+dim,function(d){
             return{
                 NAME:d.Name,
@@ -48,10 +48,10 @@ async function changeData(){
         });
         gapPlot.updateData(data);
         
-    } catch (error) {
-        console.log(error);
-        alert('Could not load the dataset!');
-    }
+    //} catch (error) {
+    //    console.log(error);
+    //    alert('Could not load the dataset!');
+    //}
 }
 async function loadFile(file) {
     let data = await d3.csv(file).then(d => {

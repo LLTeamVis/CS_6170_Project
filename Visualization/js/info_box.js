@@ -82,7 +82,7 @@ class InfoBox {
             
                 t.enter()
                     .append('text')
-                    .text(d=>d.Name)
+                    .text(d=>d.Name+1)
                     .merge(t)
                     .attr('x', function(d) {
                         let n=+d.Name;
@@ -229,7 +229,7 @@ class InfoBox {
             
                 t.enter()
                     .append('text')
-                    .text(d=>d.Name)
+                    .text(d=>d.Name+1)
                     .merge(t)
                     .attr('x', function(d) {
                         let n=+d.Name;
@@ -359,7 +359,7 @@ class InfoBox {
             
                 t.enter()
                     .append('text')
-                    .text(d=>d.Name)
+                    .text(d=>d.Name+1)
                     .merge(t)
                     .attr('x', function(d) {
                         let n=+d.Name;
