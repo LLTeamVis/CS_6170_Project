@@ -1,6 +1,0 @@
-n Contig17681.0
-n Contig214.1
-n Contig20695.0
-e Contig17681.0 Contig214.1 3.0
-e Contig17681.0 Contig20695.0 3.0
-e Contig214.1 Contig20695.0 15.0

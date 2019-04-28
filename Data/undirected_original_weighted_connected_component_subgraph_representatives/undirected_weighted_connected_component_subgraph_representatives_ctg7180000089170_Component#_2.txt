@@ -1,8 +1,0 @@
-n Contig1047.1
-n Contig36.1
-n Contig19845.0
-n Contig18127.0
-e Contig1047.1 Contig18127.0 6.0
-e Contig36.1 Contig19845.0 8.0
-e Contig36.1 Contig18127.0 10.0
-e Contig19845.0 Contig18127.0 8.0

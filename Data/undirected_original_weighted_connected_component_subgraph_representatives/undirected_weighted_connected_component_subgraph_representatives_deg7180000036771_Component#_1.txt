@@ -1,3 +1,0 @@
-n Contig21988.0
-n Contig17123.0
-e Contig21988.0 Contig17123.0 26.0

@@ -1,7 +1,0 @@
-n Contig5094.0
-n Contig9284.0.0
-n Contig12594.0
-n Contig14032.0
-e Contig5094.0 Contig12594.0 8.0
-e Contig9284.0.0 Contig12594.0 7.0
-e Contig12594.0 Contig14032.0 6.0

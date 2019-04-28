@@ -1,5 +1,0 @@
-n Contig9570.0.0
-n Contig761.1
-n Contig327.0
-e Contig9570.0.0 Contig761.1 4.0
-e Contig761.1 Contig327.0 7.0

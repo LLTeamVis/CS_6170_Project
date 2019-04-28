@@ -1,7 +1,0 @@
-n Contig380.1
-n Contig17687.0.1
-n Contig17687.0.0
-n Contig17569.0
-e Contig17687.0.0 Contig17569.0 1.0
-e Contig17569.0 Contig17687.0.1 2.0
-e Contig17569.0 Contig380.1 13.0

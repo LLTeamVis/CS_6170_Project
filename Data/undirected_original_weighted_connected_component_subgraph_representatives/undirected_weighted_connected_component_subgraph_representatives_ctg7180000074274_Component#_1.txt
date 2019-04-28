@@ -1,8 +1,0 @@
-n Contig11848.0
-n Contig42.1
-n Contig20264.0
-n Contig13188.0
-e Contig11848.0 Contig42.1 10.0
-e Contig11848.0 Contig13188.0 9.0
-e Contig42.1 Contig20264.0 10.0
-e Contig20264.0 Contig13188.0 9.0

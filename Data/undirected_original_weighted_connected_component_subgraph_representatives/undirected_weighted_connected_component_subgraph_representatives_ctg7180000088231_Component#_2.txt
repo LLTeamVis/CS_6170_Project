@@ -1,9 +1,0 @@
-n Contig7224.0
-n Contig15873.0
-n Contig20697.0
-n Contig9631.0
-n Contig8301.0
-e Contig7224.0 Contig15873.0 12.0
-e Contig7224.0 Contig8301.0 4.0
-e Contig7224.0 Contig9631.0 10.0
-e Contig7224.0 Contig20697.0 1.0

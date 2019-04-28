@@ -1,3 +1,0 @@
-n Contig6932.0
-n Contig20166.0
-e Contig6932.0 Contig20166.0 9.0

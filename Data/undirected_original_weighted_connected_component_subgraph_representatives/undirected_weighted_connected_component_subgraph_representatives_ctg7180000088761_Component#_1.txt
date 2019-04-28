@@ -1,9 +1,0 @@
-n Contig10381.0
-n Contig6862.0
-n Contig19009.0
-n Contig5.1
-e Contig10381.0 Contig6862.0 4.0
-e Contig10381.0 Contig19009.0 4.0
-e Contig6862.0 Contig5.1 3.0
-e Contig6862.0 Contig19009.0 5.0
-e Contig19009.0 Contig5.1 3.0

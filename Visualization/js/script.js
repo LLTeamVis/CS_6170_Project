@@ -2,9 +2,23 @@
 let gapPlot=new GapPlot();
 let infoBox = new InfoBox();
 loadData().then(data => {
-    
-    gapPlot.set(data,updateInfo);
-    infoBox.set('ctg7180000073073_Component#_1');
+    let ordinalScale = d3.scaleOrdinal()
+	                .domain(['g101','g117','g120','g128',
+                    'g13','g137','g150','g161',
+                    'g168','g171','g172','g173',
+                    'g175','g185','g186','g215',
+                    'g470','g503','g530','g546',
+                    'g563','g570','g572','g583',
+                    'g595','g596','g600','g74'])
+                    .range(['pink','hotpink','deeppink','palevioletred',
+                    'crimson','red','orangered','darkorange',
+                    'yellow','papayawhip','peachpuff','darkkhaki',
+                    'gold','rosybrown','chocolate','darkolivegreen',
+                    'yellowgreen','limegreen','lawngreen','springgreen',
+                    'aqua','aquamarine','lightsteelblue','blue',
+                    'plum','fuchsia','mediumpurple','indigo']);
+    gapPlot.set(data,updateInfo,ordinalScale);
+    infoBox.set('g13');
 
     let that = this;
     function updateInfo(file){
@@ -19,16 +33,13 @@ loadData().then(data => {
 });
 
 async function changeData(){
-    let dataFile = document.getElementById('dataset').value;
+    let dataset = document.getElementById('dataset').value;
     let dim=document.getElementById('dimension').value;
-    let dir=document.getElementById('distance').value;
-    let fileDir='';
-    if(dir=='bottleneck')
-        fileDir='../Data/bottleneck/';
-    else if(dir=='wasserstein')
-        fileDir='../Data/wasserstein/';
+    let dist=document.getElementById('distance').value;
+    let method=document.getElementById('method').value
+    
     try{
-        const data = await d3.csv(fileDir+dataFile+dim+'.csv',function(d){
+        const data = await d3.csv(dataset+method+dist+dim,function(d){
             return{
                 NAME:d.Name,
                 X:+d.X,
@@ -59,7 +70,7 @@ async function loadFile(file) {
 }
 
 async function loadData() {
-    let data = d3.csv('../Data/bottleneck/MDS_coordinates_0.csv',function(d){
+    let data = d3.csv('../Data/original/mds_BottleNeck Distance Dim[0].txt',function(d){
         return{
             NAME:d.Name,
             X:+d.X,

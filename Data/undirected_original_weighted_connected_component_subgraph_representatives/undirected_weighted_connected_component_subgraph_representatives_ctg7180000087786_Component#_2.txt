@@ -1,3 +1,0 @@
-n Contig18917.0
-n Contig18515.0
-e Contig18917.0 Contig18515.0 56.0

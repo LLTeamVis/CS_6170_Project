@@ -1,3 +1,0 @@
-n Contig11034.0
-n Contig7002.0
-e Contig11034.0 Contig7002.0 3.0

@@ -1,7 +1,0 @@
-n Contig16058.0
-n Contig16542.0
-n Contig28.1
-n Contig11302.0.1
-e Contig16058.0 Contig16542.0 8.0
-e Contig16058.0 Contig28.1 9.0
-e Contig16058.0 Contig11302.0.1 4.0

@@ -2,20 +2,22 @@ class GapPlot {
 
     constructor() {
         this.margin = { top: 20, right: 20, bottom: 60, left: 80 };
-        this.width = 1310 - this.margin.left - this.margin.right;
-        this.height = 700 - this.margin.top - this.margin.bottom;
+        this.width = 1050 - this.margin.left - this.margin.right;
+        this.height = 600 - this.margin.top - this.margin.bottom;
         this.updateInfo=null;
         this.data = null;
+        this.ordinalScale=null;
     }
-    set(data,updateInfo) {
+    set(data,updateInfo,ordinalScale) {
         this.updateInfo=updateInfo;
         this.data = data;
+        this.ordinalScale=ordinalScale;
     }
 
 
     drawPlot() {
         
-
+        
         d3.select('#scatter-plot')
             .append('div').attr('id', 'chart-view');
 
@@ -33,25 +35,18 @@ class GapPlot {
         let svgGroup = d3.select('#chart-view').select('.plot-svg').append('g').classed('wrapper-group', true);
 
         
-        let xScale = d3.scaleLinear()
-                    .range([0,this.width])
-                    .domain([Math.floor(this.xmin(this.data)),Math.ceil(this.xmax(this.data))])
-                    .nice();
-        let yScale = d3.scaleLinear()
-                    .range([0,this.height])
-                    .domain([Math.ceil(this.ymax(this.data)),Math.floor(this.ymin(this.data))])
-                    .nice();
+        
         
         
         svgGroup.append('g')
         .attr('class','x-axis')
         .attr('transform','translate('+this.margin.left+','+(this.height+this.margin.top)+')')
-        .call(d3.axisBottom(xScale));
+        ;
 
         svgGroup.append('g')
         .attr('class','y-axis')
         .attr('transform','translate('+this.margin.left+','+this.margin.top+')')
-        .call(d3.axisLeft(yScale));
+        ;
 
 
         svgGroup.append('text')
@@ -67,7 +62,6 @@ class GapPlot {
 
 
         svgGroup.append('title').attr('class','title');
-
 
     }
 
@@ -90,22 +84,20 @@ class GapPlot {
 
         //YOUR CODE HERE  
         let that = this;
-
-
+        
+        
         let xScale = d3.scaleLinear()
                     .range([0,this.width])
-                    .domain([Math.floor(this.xmin(this.data)),Math.ceil(this.xmax(this.data))])
+                    .domain([this.xmin(this.data)-0.1,this.xmax(this.data)+0.1])
                     .nice();
         let yScale = d3.scaleLinear()
                     .range([0,this.height])
-                    .domain([Math.ceil(this.ymax(this.data)),Math.floor(this.ymin(this.data))])
+                    .domain([this.ymax(this.data)+0.1,this.ymin(this.data)-0.1])
                     .nice();
         //let cScale = d3.scaleLinear
         
         d3.select('.x-axis').call(d3.axisBottom(xScale));
         d3.select('.y-axis').call(d3.axisLeft(yScale));
-
-        
         
         d3.select('.wrapper-group')
         .selectAll('circle')
@@ -123,9 +115,15 @@ class GapPlot {
         .selectAll('circle')
         .attr('cx',d=>xScale(d.X)+that.margin.left)
         .attr('cy',d=>yScale(d.Y))
-        .attr('fill','#d9d9d9')
-        .attr('stroke','gray')
-        .attr('r',5)
+        .attr('fill',d=>{
+            if(d.NAME.indexOf('_')!=-1){
+                return that.ordinalScale(d.NAME.substring(0,d.NAME.indexOf('_')));
+            }
+            else return that.ordinalScale(d.NAME);
+        })
+        .attr('stroke','white')
+        .attr('stroke-width',1)
+        .attr('r',7)
         .on('mouseover',function(d){
             d3.select('.title').text(d.NAME);
         })
@@ -134,8 +132,12 @@ class GapPlot {
             that.updateInfo(d.NAME);
             d3.select('.wrapper-group')
             .selectAll('circle')
-            .attr('fill','#d9d9d9');
-            d3.select(this).attr('fill','red');
+            .attr('stroke','white')
+            .attr('stroke-width',1)
+            .attr('r',7);
+            d3.select(this).attr('stroke','lightgray')
+            .attr('stroke-width',3)
+            .attr('r',11);
             d3.event.stopPropagation();
         });
         
@@ -384,7 +386,7 @@ class GapPlot {
     }
 
     xmax(data){
-        let m=0;
+        let m=-99999999;
         for(let i=0;i<data.length;i++){
             if(m<data[i].X){
                 m=data[i].X;
@@ -393,7 +395,7 @@ class GapPlot {
         return m;
     }
     ymax(data){
-        let m=0;
+        let m=-9999999999;
         for(let i=0;i<data.length;i++){
             if(m<data[i].Y){
                 m=data[i].Y;

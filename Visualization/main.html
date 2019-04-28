@@ -14,35 +14,45 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>Visualization</h1>
-        <p class="info">Name: Gang Liu & Mai Li</p>
-    </div>
+    
     <div class="wrapper">
 
         <div id="scatter-plot" class="left">
+            <div class="header">
+                    <h1>Visualization</h1>
+                    <p class="info">Name: Gang Liu & Mai Li</p>
+            </div>
+            <span>
+                <label>DataSet:</label>
+                <select id="dataset">
+                    <option selected value="../Data/original/">Original</option>
+                    <option value="../Data/subset/">Subset</option>
+                </select>
+            </span>
             <span>
                 <label>Method:</label>
-                <select id="dataset">
-                    <option selected value="MDS_coordinates_">MDS</option>
-                    <option value="TSNE_coordinates_">T-SNE</option>
+                <select id="method">
+                    <option selected value="mds_">MDS</option>
+                    <option value="tsne_">T-SNE</option>
                 </select>
             </span>
             <span>
                 <label>Dimension:</label>
                 <select id="dimension">
-                    <option selected value="0">0</option>
-                    <option value="1">1</option>
+                    <option selected value="Distance Dim[0].txt">0</option>
+                    <option value="Distance Dim[1].txt">1</option>
+                    <option value="Distance Dim[2].txt">2</option>
                 </select>
             </span>
             <span>
                 <label>Distance:</label>
                 <select id="distance">
-                    <option selected value="bottleneck">Bottleneck</option>
-                    <option value="wasserstein">Wasserstein</option>
+                    <option selected value="Bottleneck ">Bottleneck</option>
+                    <option value="Wasserstein ">Wasserstein</option>
                 </select>
             </span>
             <button type="button" onclick="changeData()">Update</button>
+            
         </div>
 
         <div id="info_box" class="right">

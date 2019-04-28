@@ -1,7 +1,0 @@
-n Contig19281.0
-n Contig7951.0
-n Contig1935.0.1
-n Contig7534.0
-e Contig1935.0.1 Contig7951.0 6.0
-e Contig1935.0.1 Contig19281.0 9.0
-e Contig1935.0.1 Contig7534.0 30.0

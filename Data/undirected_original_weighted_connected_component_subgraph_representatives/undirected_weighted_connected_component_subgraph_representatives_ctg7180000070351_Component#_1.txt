@@ -1,3 +1,0 @@
-n Contig89.1
-n Contig5873.0.1
-e Contig89.1 Contig5873.0.1 38.0

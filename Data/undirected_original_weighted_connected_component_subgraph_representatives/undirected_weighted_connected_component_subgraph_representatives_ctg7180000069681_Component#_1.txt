@@ -1,5 +1,0 @@
-n Contig9543.0
-n Contig3316.0
-n Contig8725.0
-e Contig9543.0 Contig3316.0 3.0
-e Contig3316.0 Contig8725.0 9.0

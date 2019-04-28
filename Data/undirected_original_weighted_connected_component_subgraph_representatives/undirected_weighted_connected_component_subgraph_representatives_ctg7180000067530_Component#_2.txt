@@ -1,3 +1,0 @@
-n Contig11340.0.1
-n Contig1515.0
-e Contig11340.0.1 Contig1515.0 24.0

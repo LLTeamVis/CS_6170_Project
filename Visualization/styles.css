@@ -165,14 +165,14 @@ path.hidden {
     padding: 5px;
     display: inline-block;
     float: left;
-    width: 70%;
+    width: 55%;
 }
 
 .right{
     padding: 5px;
     display: inline-block;
     float: left;
-    width: 20%;
+    width: 38%;
 }
 
 .innerWrapper {

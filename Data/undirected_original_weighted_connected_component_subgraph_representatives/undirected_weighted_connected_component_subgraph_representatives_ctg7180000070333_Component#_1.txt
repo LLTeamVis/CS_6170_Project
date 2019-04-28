@@ -1,5 +1,0 @@
-n Contig4321.0
-n Contig4000.0
-n Contig3098.0
-e Contig4321.0 Contig4000.0 8.0
-e Contig4000.0 Contig3098.0 12.0

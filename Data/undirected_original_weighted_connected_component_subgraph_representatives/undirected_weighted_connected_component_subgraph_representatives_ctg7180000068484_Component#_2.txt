@@ -1,7 +1,0 @@
-n Contig1458.1
-n Contig14258.0
-n Contig15213.0.0
-n Contig15808.0
-e Contig1458.1 Contig15213.0.0 15.0
-e Contig15808.0 Contig15213.0.0 6.0
-e Contig15213.0.0 Contig14258.0 10.0

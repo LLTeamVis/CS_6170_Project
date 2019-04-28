@@ -1,5 +1,0 @@
-n Contig9956.0
-n Contig14051.0
-n Contig19139.0
-e Contig9956.0 Contig14051.0 10.0
-e Contig14051.0 Contig19139.0 32.0

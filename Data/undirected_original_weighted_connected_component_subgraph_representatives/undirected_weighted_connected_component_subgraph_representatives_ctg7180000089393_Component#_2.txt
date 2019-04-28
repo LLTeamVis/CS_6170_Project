@@ -1,9 +1,0 @@
-n Contig8680.0
-n Contig2792.0
-n Contig2507.0
-n Contig14953.0
-n Contig20198.0
-e Contig8680.0 Contig20198.0 17.0
-e Contig2792.0 Contig20198.0 5.0
-e Contig2507.0 Contig20198.0 7.0
-e Contig20198.0 Contig14953.0 7.0

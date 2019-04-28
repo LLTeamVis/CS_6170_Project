@@ -1,5 +1,0 @@
-n Contig16818.0
-n Contig1942.0
-n Contig12828.0
-e Contig16818.0 Contig12828.0 8.0
-e Contig16818.0 Contig1942.0 1.0

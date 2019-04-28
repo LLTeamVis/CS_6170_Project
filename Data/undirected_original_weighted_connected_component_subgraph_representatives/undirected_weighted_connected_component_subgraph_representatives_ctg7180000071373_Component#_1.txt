@@ -1,3 +1,0 @@
-n Contig11706.0
-n Contig414.0
-e Contig11706.0 Contig414.0 45.0

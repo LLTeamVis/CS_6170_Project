@@ -1,9 +1,0 @@
-n Contig9973.0
-n Contig9190.0
-n Contig5837.0
-n Contig96.0
-e Contig9973.0 Contig9190.0 12.0
-e Contig9973.0 Contig5837.0 7.0
-e Contig9190.0 Contig5837.0 7.0
-e Contig9190.0 Contig96.0 12.0
-e Contig5837.0 Contig96.0 7.0

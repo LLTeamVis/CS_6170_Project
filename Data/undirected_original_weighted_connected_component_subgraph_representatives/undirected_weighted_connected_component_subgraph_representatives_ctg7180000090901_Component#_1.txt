@@ -1,6 +1,0 @@
-n Contig10210.0
-n Contig15736.0
-n Contig21339.0
-e Contig10210.0 Contig21339.0 2.0
-e Contig10210.0 Contig15736.0 2.0
-e Contig21339.0 Contig15736.0 54.0

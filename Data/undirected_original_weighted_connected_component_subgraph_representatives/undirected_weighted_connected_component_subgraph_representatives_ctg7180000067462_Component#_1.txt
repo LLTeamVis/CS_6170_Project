@@ -1,3 +1,0 @@
-n Contig19668.0
-n Contig21093.0.1
-e Contig19668.0 Contig21093.0.1 21.0
