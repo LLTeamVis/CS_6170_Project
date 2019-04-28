@@ -6,3 +6,6 @@
 ## Project Structure
  - [Data](https://github.com/LLTeamVis/CS_6170_Project/tree/master/Data)
  - [Website](https://llteamvis.github.io/CS_6170_Project/)
+
+## Reference
+Rossi, Ryan, and Nesreen Ahmed. "The network data repository with interactive graph analytics and visualization." Twenty-Ninth AAAI Conference on Artificial Intelligence. 2015.
