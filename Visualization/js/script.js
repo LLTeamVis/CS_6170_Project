@@ -13,12 +13,12 @@ loadData().then(data => {
                     .range(['pink','hotpink','deeppink','palevioletred',
                     'crimson','red','orangered','darkorange',
                     'yellow','papayawhip','peachpuff','darkkhaki',
-                    'gold','rosybrown','chocolate','darkolivegreen',
+                    'gold','rosybrown','chocolate','olive',
                     'yellowgreen','limegreen','lawngreen','springgreen',
                     'aqua','aquamarine','lightsteelblue','blue',
-                    'plum','fuchsia','mediumpurple','indigo']);
+                    'plum','fuchsia','violet','mediumorchid']);
     gapPlot.set(data,updateInfo,ordinalScale);
-    infoBox.set('g13');
+    infoBox.set('g13',ordinalScale);
 
     let that = this;
     function updateInfo(file){
