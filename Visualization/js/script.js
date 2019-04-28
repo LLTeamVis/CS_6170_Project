@@ -70,7 +70,7 @@ async function loadFile(file) {
 }
 
 async function loadData() {
-    let data = d3.csv('../Data/original/mds_BottleNeck Distance Dim[0].txt',function(d){
+    let data = d3.csv('../Data/original/mds_Bottleneck Distance Dim[0].txt',function(d){
         return{
             NAME:d.Name,
             X:+d.X,
