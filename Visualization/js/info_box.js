@@ -62,7 +62,7 @@ class InfoBox {
 
             var u = edge
                     .selectAll('line')
-                    .data(edges);
+                    .data(edges,function(d) { return d ? d.index : this.id; });
     
                 u.enter()
                 .append('line')
@@ -71,75 +71,83 @@ class InfoBox {
     
                 u.exit().remove();
 
+              u = circle
+                .selectAll('circle')
+                .data(nodes);
+            
+              u.enter()
+                .append('circle')
+                .attr('r', radius)
+                .merge(u)
+                .style('fill',that.ordinalScale(that.name))
+                .call(d3.drag()
+                  .on("start", dragstarted)
+                  .on("drag", dragged)
+                  .on("end", dragended));
+            
+              u.exit().remove();
+  
+              var t = text
+              .selectAll('text')
+              .data(nodes);
+          
+              t.enter()
+                  .append('text')
+                  .merge(t)
+                  .attr('font-size', 15)
+                  .call(d3.drag()
+                  .on("start", dragstarted)
+                  .on("drag", dragged)
+                  .on("end", dragended));
+          
+            t.exit().remove();
+
             function ticked() {
                 updateEdges();
                 updateNodes();
             }
             function updateNodes(){
-                var u = circle
-                  .selectAll('circle')
-                  .data(nodes);
-              
-                u.enter()
-                  .append('circle')
-                  .attr('r', radius)
-                  .merge(u)
-                  .attr('cx', function(d) {
-                    return d.x = Math.max(radius, Math.min(that.width + that.margin.left + that.margin.right - radius, d.x));
-                  })
-                  .attr('cy', function(d) {
-                    return d.y  = Math.max(radius, Math.min(that.height + that.margin.top + that.margin.bottom - radius, d.y));
-                  })
-                  .style('fill',that.ordinalScale(that.name))
-                  .call(d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended));
-              
-                u.exit().remove();
-    
-                var t = text
-                .selectAll('text')
-                .data(nodes);
-            
-                t.enter()
-                    .append('text')
-                    .text(d=>d.Name+1)
-                    .merge(t)
-                    .attr('x', function(d) {
-                        let n=+d.Name;
-                        if(n>=10)
-                        return d.x-9;
-                        else return d.x-5;
-                    })
-                    .attr('y', function(d) {
-                    return d.y+5
-                    })
-                    .attr('font-size', 15)
-                    .call(d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended));
-            
-              t.exit().remove();
-            }
-            function updateEdges(){
-                var u = svgPlot
-                    .selectAll('line')
-                .attr('x1', function(d) {
-                  return d.source.x
+              var u = circle
+                .selectAll('circle')
+                .attr('cx', function(d) {
+                  return d.x = Math.max(radius, Math.min(that.width + that.margin.left + that.margin.right - radius, d.x));
                 })
-                .attr('y1', function(d) {
-                  return d.source.y
-                })
-                .attr('x2', function(d) {
-                  return d.target.x
-                })
-                .attr('y2', function(d) {
-                  return d.target.y
+                .attr('cy', function(d) {
+                  return d.y = Math.max(radius, Math.min(that.height + that.margin.top + that.margin.bottom - radius, d.y));
                 });
-                
-            }
+            
+              
+  
+              var t = text
+              .selectAll('text')
+                  .text(d=>d.Name+1)
+                  .attr('x', function(d) {
+                      let n=+d.Name+1;
+                      if(n>=10)
+                      return d.x-9;
+                      else return d.x-5;
+                  })
+                  .attr('y', function(d) {
+                  return d.y+5
+                  });
+          }
+          function updateEdges(){
+            var u = edge
+                .selectAll('line')
+            .attr('x1', function(d) {
+              return d.source.x
+            })
+            .attr('y1', function(d) {
+              return d.source.y
+            })
+            .attr('x2', function(d) {
+              return d.target.x
+            })
+            .attr('y2', function(d) {
+              return d.target.y
+            });
+            
+        }
     
             function dragstarted(d) {
                 if (!d3.event.active) force.alphaTarget(0.3).restart();
@@ -278,7 +286,7 @@ class InfoBox {
                 .selectAll('text')
                     .text(d=>d.Name+1)
                     .attr('x', function(d) {
-                        let n=+d.Name;
+                        let n=+d.Name+1;
                         if(n>=10)
                         return d.x-9;
                         else return d.x-5;
@@ -429,7 +437,7 @@ class InfoBox {
               .selectAll('text')
                   .text(d=>d.Name+1)
                   .attr('x', function(d) {
-                      let n=+d.Name;
+                      let n=+d.Name+1;
                       if(n>=10)
                       return d.x-9;
                       else return d.x-5;
