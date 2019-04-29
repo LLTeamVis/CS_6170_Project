@@ -24,15 +24,14 @@ class InfoBox {
         let svgGroup2=d3.select('#info_box').append('svg').attr('class','svg2')
         .attr("width", this.width + this.margin.left + this.margin.right)
         .attr("height", this.height-200);
-        d3.select('.svg2').append('g');
         let svgPlot=svgGroup.append('g');
         svgPlot.append('g').attr('class','svg1_edges');
         svgPlot.append('g').attr('class','svg1_circles');
         svgPlot.append('g').attr('class','svg1_texts');
         let svgPlot2=svgGroup2.append('g');
-        svgPlot.append('g').attr('class','svg2_edges');
-        svgPlot.append('g').attr('class','svg2_circles');
-        svgPlot.append('g').attr('class','svg2_texts');
+        svgPlot2.append('g').attr('class','svg2_edges');
+        svgPlot2.append('g').attr('class','svg2_circles');
+        svgPlot2.append('g').attr('class','svg2_texts');
 
         let i=0;
         d3.csv('../Data/graph/ENZYMES_'+this.name+'.edges',function(d){
@@ -217,7 +216,6 @@ class InfoBox {
             .force('link', d3.forceLink().links(edges))
             .on('tick', ticked);
 
-            console.log(edges[0]);
             var u = edge
                     .selectAll('line')
                     .data(edges,function(d) { return d ? d.index : this.id; });
@@ -338,6 +336,9 @@ class InfoBox {
                   index:i++
               };
         }).then(edges=>{
+            let edge=d3.select('.svg2_edges');
+            let circle=d3.select('.svg2_circles');
+            let text=d3.select('.svg2_texts');
             let max=d3.max(edges,function(d){
                 return d.source>d.target?d.source:d.target;
             });
@@ -354,93 +355,106 @@ class InfoBox {
             .force('link', d3.forceLink().links(edges))
             .on('tick', ticked);
             let svgPlot=d3.select('#info_box').select('.svg2').select('g');
+
+            var u = edge
+                    .selectAll('line')
+                    .data(edges,function(d) { return d ? d.index : this.id; });
+    
+                u.enter()
+                .append('line')
+                .merge(u)
+                .style('stroke','ccc');
+    
+                u.exit().remove();
+
+              u = circle
+                .selectAll('circle')
+                .data(nodes);
+            
+              u.enter()
+                .append('circle')
+                .attr('r', radius)
+                .merge(u)
+                .style('fill',that.ordinalScale(that.name))
+                .style('opacity',d=>{
+                  if(that.IsSub(edges,d.Name))
+                  return 1;
+                  else return 0;
+                })
+                .call(d3.drag()
+                  .on("start", dragstarted)
+                  .on("drag", dragged)
+                  .on("end", dragended));
+            
+              u.exit().remove();
+  
+              var t = text
+              .selectAll('text')
+              .data(nodes);
+          
+              t.enter()
+                  .append('text')
+                  .merge(t)
+                  .attr('font-size', 15)
+                  .style('opacity',d=>{
+                    if(that.IsSub(edges,d.Name))
+                    return 1;
+                    else return 0;
+                  })
+                  .call(d3.drag()
+                  .on("start", dragstarted)
+                  .on("drag", dragged)
+                  .on("end", dragended));
+          
+            t.exit().remove();
+
             function ticked() {
                 updateEdges();
                 updateNodes();
             }
             
             function updateNodes(){
-                var u = svgPlot
-                  .selectAll('circle')
-                  .data(nodes);
-              
-                u.enter()
-                  .append('circle')
-                  .attr('r', radius)
-                  .merge(u)
-                  .attr('cx', function(d) {
-                    return d.x = Math.max(radius, Math.min(that.width + that.margin.left + that.margin.right - radius, d.x));
-                  })
-                  .attr('cy', function(d) {
-                    return d.y = Math.max(radius, Math.min(that.height-200 - radius, d.y));
-                  })
-                  .style('opacity',d=>{
-                    if(that.IsSub(edges,d.Name))
-                    return 1;
-                    else return 0;
-                  })
-                  .style('fill',that.ordinalScale(that.name))
-                  .call(d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended));
-              
-                u.exit().remove();
-    
-                var t = svgPlot
-                .selectAll('text')
-                .data(nodes);
+              var u = circle
+                .selectAll('circle')
+                .attr('cx', function(d) {
+                  return d.x = Math.max(radius, Math.min(that.width + that.margin.left + that.margin.right - radius, d.x));
+                })
+                .attr('cy', function(d) {
+                  return d.y = Math.max(radius, Math.min(that.height -200 - radius, d.y));
+                });
             
-                t.enter()
-                    .append('text')
-                    .text(d=>d.Name+1)
-                    .merge(t)
-                    .attr('x', function(d) {
-                        let n=+d.Name;
-                        if(n>=10)
-                        return d.x-9;
-                        else return d.x-5;
-                    })
-                    .attr('y', function(d) {
-                    return d.y+5
-                    })
-                    .attr('font-size', 15)
-                    .style('opacity',d=>{
-                      if(that.IsSub(edges,d.Name))
-                      return 1;
-                      else return 0;
-                    })
-                    .call(d3.drag()
-                    .on("start", dragstarted)
-                    .on("drag", dragged)
-                    .on("end", dragended));
+              
+  
+              var t = text
+              .selectAll('text')
+                  .text(d=>d.Name+1)
+                  .attr('x', function(d) {
+                      let n=+d.Name;
+                      if(n>=10)
+                      return d.x-9;
+                      else return d.x-5;
+                  })
+                  .attr('y', function(d) {
+                  return d.y+5
+                  });
+          }
+          function updateEdges(){
+            var u = edge
+                .selectAll('line')
+            .attr('x1', function(d) {
+              return d.source.x
+            })
+            .attr('y1', function(d) {
+              return d.source.y
+            })
+            .attr('x2', function(d) {
+              return d.target.x
+            })
+            .attr('y2', function(d) {
+              return d.target.y
+            });
             
-              t.exit().remove();
-            }
-            function updateEdges(){
-                var u = svgPlot
-                    .selectAll('line')
-                    .data(edges)
-    
-                u.enter()
-                .append('line')
-                .merge(u)
-                .attr('x1', function(d) {
-                  return d.source.x
-                })
-                .attr('y1', function(d) {
-                  return d.source.y
-                })
-                .attr('x2', function(d) {
-                  return d.target.x
-                })
-                .attr('y2', function(d) {
-                  return d.target.y
-                })
-                .style('stroke','aaa');
-    
-                u.exit().remove()
-            }
+        }
     
             function dragstarted(d) {
                 if (!d3.event.active) force.alphaTarget(0.3).restart();
